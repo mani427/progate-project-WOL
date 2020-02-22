@@ -1,0 +1,336 @@
+<html>
+  <head>
+    <h1>SQL QUERIES</h1>
+    <h1>Learn different SQL queries here </h1>
+    <title>
+
+    </title>
+  </head>
+<body>
+    <ul>
+        <li>
+          <a href="#">
+            <h2>CREATE TABLE COMMAND </h2>
+            <p><textarea>syntax: CREATE TABLE table_name
+              (column1 datatype, columne2 datatype...);
+            </textarea></p>
+          </a>
+        </li>
+        <li>
+            <a href="#">
+              <h2>INSERT QUERY</h2>
+              <p><textarea>syntax: INSERT INTO table_name (column1, column2, column3, ...)
+                VALUES (value1, value2, value3, ...);</textarea></p>
+              
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>ALTER QUERY</h2>
+              <p><textarea>syntax: ALTER TABLE table_name
+                ADD column_name datatype;</textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>UPDATE QUERY</h2>
+              <p><textarea>syntax: UPDATE table_name
+                SET column1 = value1, column2 = value2, ...
+                WHERE condition;</textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>DELETE QUERY</h2>
+              <p><textarea>syntax: DELETE FROM table_name WHERE condition;</textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>NESTED QUERIES</h2>
+              <p><textarea>syntax: SELECT column_name(s)
+                FROM   table1,tabl2....
+                WHERE  column_name OPERATOR
+                   (SELECT column_name(s)
+                   FROM table1 [, table2 ]
+                   [WHERE])</textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>TRUNCATE QUERY</h2>
+              <p><textarea>syntax: truncate table tablename;  </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>DROP QUERY</h2>
+              <p><textarea>drop table tablename;  </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>LIKE CLAUSE</h2>
+              <p><textarea>Syntax:
+
+                SELECT FROM table_name
+WHERE column LIKE '%XXXX%'
+  </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>UNION CLAUSE</h2>
+              <p><textarea>SELECT column1 [, column2 ]
+                FROM table1 [, table2 ]
+                [WHERE condition]
+                
+                UNION
+                
+                SELECT column1 [, column2 ]
+                FROM table1 [, table2 ]
+                [WHERE condition]</textarea></p>
+            </a>
+          </li>
+         
+          
+          <h3>AGGREGATE FUNCTIONS IN MYSQL</h3>
+          <li>
+            <a href="#">
+              <h2>count()</h2>
+              <p><textarea>Syntax:
+
+                SELECT COUNT (aggregate_expression)  
+                FROM table_name  
+                [WHERE conditions];  </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>sum()</h2>
+              <p><textarea>SELECT SUM(aggregate_expression)  
+                FROM tables  
+                [WHERE conditions];  </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>avg()</h2>
+              <p><textarea>SELECT AVG(aggregate_expression)  
+                FROM tables  
+                [WHERE conditions];  </textarea></p>
+            </a>
+          </li>
+          
+          <li>
+            <a href="#">
+              <h2>min()</h2>
+              <p><textarea>SELECT MIN (aggregate_expression)  
+                FROM tables  
+                [WHERE conditions];  </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>max()</h2>
+              <p><textarea>SELECT MAX(aggregate_expression)  
+                FROM tables  
+                [WHERE conditions];  </textarea></p>
+            </a>
+          </li>
+          <H3>CLAUSES</H3>
+          
+          <li>
+            <a href="#">
+              <h2>ORDER BY</h2>
+              <p><textarea>SELECT expressions  
+                FROM tables  
+                [WHERE conditions]  
+                ORDER BY expression [ ASC | DESC ];  </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>GROUP BY</h2>
+              <p><textarea>SELECT expression1, expression2, ... expression_n,   
+                aggregate_function (expression)  
+                FROM tables  
+                [WHERE conditions]  
+                GROUP BY expression1, expression2, ... expression_n; </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>HAVING</h2>
+              <p><textarea>SELECT expression1, expression2, ... expression_n,   
+                aggregate_function (expression)  
+                FROM tables  
+                [WHERE conditions]  
+                GROUP BY expression1, expression2, ... expression_n  
+                HAVING condition;  </textarea></p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h2>DISTINCT</h2>
+              <p><textarea>SELECT DISTINCT expressions  
+                FROM tables  
+                [WHERE conditions]; </textarea></p>
+            </a>
+          </li>
+          
+    </ul>
+
+    <div class="mani"><body>
+      <h1>JOINS</h1>
+      <p>There are various types of joins</p>
+    <p> MySQL JOINS are used with SELECT statement. It is used to retrieve data from multiple tables. It is performed whenever you need to fetch records from two or more tables.
+
+      There are three types of MySQL joins:
+      
+      MySQL INNER JOIN (or sometimes called simple join)
+      MySQL LEFT OUTER JOIN (or sometimes called LEFT JOIN)
+      MySQL RIGHT OUTER JOIN (or sometimes called RIGHT JOIN)</p>
+    <p>MySQL Inner JOIN (Simple Join)
+      The MySQL INNER JOIN is used to return all rows from multiple tables where the join condition is satisfied. It is the most common type of join.
+      
+      
+      Syntax:
+      
+      SELECT columns  
+      FROM table1   
+      INNER JOIN table2  
+      ON table1.column = table2.column;  
+      </p>
+    <p>MySQL Left Outer Join
+      The LEFT OUTER JOIN returns all rows from the left hand table specified in the ON condition and only those rows from the other table where the join condition is fulfilled.
+      
+      Syntax:
+      
+      SELECT columns  
+      FROM table1  
+      LEFT [OUTER] JOIN table2  
+      ON table1.column = table2.column;  </p>
+    <p>MySQL Right Outer Join
+      The MySQL Right Outer Join returns all rows from the RIGHT-hand table specified in the ON condition and only those rows from the other table where he join condition is fulfilled.
+      
+      Syntax:
+      
+      SELECT columns  
+      FROM table1  
+      RIGHT [OUTER] JOIN table2  
+      ON table1.column = table2.column;  </p></body>
+    </div>
+
+<link href=" " rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<div class="boxes">
+
+    <div class="planner">
+        <h1> Planner:Practice mysql queries here as follows</h1>
+        <form>
+        <table  border="2" cellspacing="6" align="left">
+      <tr>
+          <td>Query</td>
+        <td>day1</td>
+        <td>day2</td>
+        <td>day3</td>
+        <td>day4</td>
+        <td>day5</td>
+        <td>day6</td>
+        <td>day7</td>
+        
+      </tr>
+      <tr>
+          <td> query_set1</td>
+          <td><input type="text" size="15">SELECT </td>
+          <td><input type="text" size="15">INSERT</td>
+          <td> <input type="text" size="15">UPDATE</td>
+          <td><input type="text" size="15">ALTER</td>
+          <td><input type="text" size="15">DELETE</td>
+          <td><input type="text" size="15">DROP</td>
+          <td><input type="text" size="15">TRUNCATE</td>
+      </tr>
+      <tr>
+        <td> query_set2</td>
+        <td><input type="text" size="15">COUNT()</td>
+        <td><input type="text" size="15">SUM()</td>
+        <td> <input type="text" size="15">MIN() </td>
+        <td><input type="text" size="15">MAX()</td>
+        <td><input type="text" size="15">AVG()</td>
+        <td><input type="text" size="15">FIRST()</td>
+        <td><input type="text" size="15">LAST()</td>
+    </tr>
+    <tr>
+        <td> query_set3</td>
+        <td><input type="text" size="15">WHERE</td>
+        <td><input type="text" size="15">DISTINCT</td>
+        <td> <input type="text" size="15"> ORDER BY</td>
+        <td><input type="text" size="15">GROUP BY</td>
+        <td><input type="text" size="15">HAVING</td>
+        <td><input type="text" size="15">LIKE</td>
+        <td><input type="text" size="15">NULL</td>
+    </tr>
+    <tr>
+        <td> query_set4</td>
+        <td><input type="text" size="15">NATURAL JOIN</td>
+        <td><input type="text" size="15">OUTER JOIN</td>
+        <td><input type="text" size="15"> SELF JOIN</td>
+        <td><input type="text" size="15">EQUI JOIN</td>
+        <td><input type="text" size="15">CROSS JOIN</td>
+        <td><input type="text" size="15">LEFT OUTER JOIN</td>
+        <td><input type="text" size="15">RIGHT OUTER JOIN</td>
+    </tr>
+    <tr>
+        <td> query_set5</td>
+        <td><input type="text" size="15">AND</td>
+        <td><input type="text" size="15">OR</td>
+        <td><input type="text" size="15">AND OR </td>
+        <td><input type="text" size="15">IN</td>
+        <td><input type="text" size="15">NOT IN</td>
+        <td><input type="text" size="15">NOT LIKE</td>
+        <td><input type="text" size="15">BETWEEN</td>
+    </tr>
+    <tr>
+        <td> query_set6</td>
+        <td><input type="text" size="15">IF() </td>
+        <td><input type="text" size="15">IFNULL()</td>
+        <td> <input type="text" size="15">NULLIF() </td>
+        <td><input type="text" size="15">IS NOT NULL()</td>
+        <td><input type="text" size="15">INNER JOIN</td>
+        <td><input type="text" size="15">IF STATEMENT</td>
+        <td><input type="text" size="15">IS NULL</td>
+    </tr>
+    
+    
+    </table> </form>
+    
+    
+    </div>
+    
+    <div class="text"><h1>Notes</h1><h2>Type your notes, to do lists and much more in the green box</h2> <textarea></textarea></div>
+    <div class="paper1"><h4>WRITE YOUR DAILY PROGRESS HERE</h4><textarea></textarea></div>
+  </div>
+
+    <link href=" " rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</body>
+</html>
+  
+      
+    
+
+
+
+
+    
+    
+    
+
+
+  
+
+
+
+
+
